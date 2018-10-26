@@ -63,13 +63,23 @@ function draw() {
   drawBall();
   drawPaddle();
 
+  // left/right wall
   if (x + dx > canvas.width - ballRadius || x + dx < ballRadius) {
     fillColor = getRandomColor()
     dx = -dx;
   }
-  if (y + dy > canvas.height - ballRadius || y + dy < ballRadius) {
-    fillColor = getRandomColor()
+
+  // top wall
+  if (y + dy < ballRadius) {
     dy = -dy;
+  } else if (y + dy > canvas.height - ballRadius) {
+    if (x > paddleX && x < paddleX + paddleWidth) {
+      dy = -dy;
+    } else {
+      clearInterval(t)
+      alert("GAME OVER");
+      document.location.reload();
+    }
   }
 
   if (rightPressed) {
@@ -90,4 +100,4 @@ function draw() {
 }
 
 fillColor = getRandomColor()
-setInterval(draw, 10);
+var t = setInterval(draw, 10);

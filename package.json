@@ -1,0 +1,19 @@
+{
+  "name": "0_67_pong",
+  "version": "1.0.0",
+  "description": "a vanilla game of pong",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fancn21th/0_67_Pong.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/fancn21th/0_67_Pong/issues"
+  },
+  "homepage": "https://github.com/fancn21th/0_67_Pong#readme"
+}

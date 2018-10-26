@@ -14,6 +14,7 @@ var paddleX = (canvas.width - paddleWidth) / 2;
 var rightPressed = false;
 var leftPressed = false;
 
+// listen to user's arrow key press events
 document.addEventListener("keydown", keyDownHandler, false);
 document.addEventListener("keyup", keyUpHandler, false);
 
@@ -33,6 +34,7 @@ function keyUpHandler(e) {
   }
 }
 
+// get a random color
 function getRandomColor() {
   var letters = '0123456789ABCDEF';
   var color = '#';
